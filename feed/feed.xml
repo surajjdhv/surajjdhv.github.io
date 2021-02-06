@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Suraj Jadhav</title>
-	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	<subtitle>Hi, I&#39;m Suraj. A web developer based in Mumbai, India. I write about the things I learn on my own which should be shared, tutorials and sometimes my opinions on random topics.</subtitle>
 	
 	<link href="https://surajjadhav.me/feed/feed.xml" rel="self"/>
 	<link href="https://surajjadhav.me/"/>
