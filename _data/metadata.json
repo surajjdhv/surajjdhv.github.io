@@ -1,9 +1,9 @@
 {
   "title": "Suraj Jadhav",
   "url": "https://surajjadhav.me/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Hi, I'm Suraj. A web developer based in Mumbai, India. I write about the things I learn on my own which should be shared, tutorials and sometimes my opinions on random topics.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Hi, I'm Suraj. A web developer based in Mumbai, India. I write about the things I learn on my own which should be shared, tutorials and sometimes my opinions on random topics.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://surajjadhav.me/"

@@ -5,6 +5,8 @@ eleventyNavigation:
   order: 1
 ---
 
+<p>Hi, I'm Suraj. A web developer based in Mumbai, India. I write about the things I learn on my own which should be shared, tutorials and sometimes my opinions on random topics.</p>
+
 {% set maxPosts = collections.posts.length | min(3) %}
 <h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
