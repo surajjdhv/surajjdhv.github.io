@@ -73,6 +73,9 @@ html {
 }
 body {
 	max-width: 40em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -164,15 +167,17 @@ code {
 /* Header */
 header {
 	display: flex;
-	gap: 1em .5em;
+	/* gap: 1em .5em; */
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 1em;
+    justify-content: space-between;
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
 	margin-right: 2em;
+    text-decoration: none;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -286,6 +291,22 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+footer {
+    margin-top: auto;
+    border-top: 1px dashed var(--color-gray-20);
+    padding: 1em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0px;
+}
+
+footer a {
+    text-decoration: none;
 }</style>
 	</head>
 	<body>
@@ -305,10 +326,6 @@ h2 + .header-anchor {
 
 		<main id="skip">
 			
-<div class="message-box">
-	<p>👋 Hi, I'm Suraj Jadhav from Mumbai, India. With 7+ years of experience in web development, I'm passionate about PHP and JavaScript, specializing in Laravel and Vue.js.</p>
-</div>
-
 <h1>Tagged “sample”</h1>
 
 
@@ -328,7 +345,10 @@ h2 + .header-anchor {
 
 		</main>
 
-		<footer></footer>
+		<footer>
+            <p>Made with ❣️ by me. Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted on <a href="https://pages.github.com/">Github Pages</a>.</p>
+            <p><a href="https://x.com/surajsjdhv">X</a> · <a href="https://github.com/surajjdhv">GitHub</a> · <a href="https://www.linkedin.com/in/suraj-jadhav">LinkedIn</a></p>
+        </footer>
 
 		<!-- Current page: /tags/sample/ -->
 	</body>

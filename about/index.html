@@ -72,6 +72,9 @@ html {
 }
 body {
 	max-width: 40em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -163,15 +166,17 @@ code {
 /* Header */
 header {
 	display: flex;
-	gap: 1em .5em;
+	/* gap: 1em .5em; */
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 1em;
+    justify-content: space-between;
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
 	margin-right: 2em;
+    text-decoration: none;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -285,6 +290,22 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+footer {
+    margin-top: auto;
+    border-top: 1px dashed var(--color-gray-20);
+    padding: 1em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0px;
+}
+
+footer a {
+    text-decoration: none;
 }</style>
 	</head>
 	<body>
@@ -316,12 +337,15 @@ h2 + .header-anchor {
 <h2 id="hobbies" tabindex="-1">Hobbies <a class="header-anchor" href="#hobbies">#</a></h2>
 <p>📚 I love reading and 🛠️ tinkering with hardware devices.</p>
 <h2 id="contact" tabindex="-1">Contact <a class="header-anchor" href="#contact">#</a></h2>
-<p>📧 Feel free to email me at <a href="mailto:dev@surajjadhav.anonaddy.me">dev@surajjadhav.anonaddy.me</a> to discuss opportunities.</p>
-<p>Let's connect and create something awesome together!</p>
+<p>📧 Feel free to <a href="mailto:dev@surajjadhav.anonaddy.me">contact me</a> to discuss opportunities.
+Let's connect and create something awesome together!</p>
 
 		</main>
 
-		<footer></footer>
+		<footer>
+            <p>Made with ❣️ by me. Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted on <a href="https://pages.github.com/">Github Pages</a>.</p>
+            <p><a href="https://x.com/surajsjdhv">X</a> · <a href="https://github.com/surajjdhv">GitHub</a> · <a href="https://www.linkedin.com/in/suraj-jadhav">LinkedIn</a></p>
+        </footer>
 
 		<!-- Current page: /about/ -->
 	</body>
