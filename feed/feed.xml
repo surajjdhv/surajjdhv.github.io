@@ -4,12 +4,114 @@
 	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
 	<link href="https://surajjadhav.me/feed/feed.xml" rel="self"/>
 	<link href="https://surajjadhav.me/"/>
-	<updated>2023-11-01T00:00:00Z</updated>
+	<updated>2023-11-06T00:00:00Z</updated>
 	<id>https://surajjadhav.me/</id>
 	<author>
 		<name>Suraj Jadhav</name>
 		<email>dev@surajjadhav.anonaddy.me</email>
 	</author>
+	
+	<entry>
+		<title>Enabling WebSQL Access in Chrome 119 and Beyond.</title>
+		<link href="https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/"/>
+		<updated>2023-11-06T00:00:00Z</updated>
+		<id>https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/</id>
+		<content type="html">&lt;p&gt;Starting with Chrome 119, Google Chrome has made some changes that impact WebSQL access. WebSQL is no longer available by default, but you can still enable it up to Chrome 123 using the &amp;quot;WebSQLAccess&amp;quot; policy. In this blog post, we&#39;ll walk you through the steps to enable WebSQL access on your Chrome browser.&lt;/p&gt;
+&lt;h2 id=&quot;enabling-websql-access-on-windows&quot; tabindex=&quot;-1&quot;&gt;Enabling WebSQL Access on Windows &lt;a class=&quot;header-anchor&quot; href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To enable the WebSQL policy on a Windows computer, you can follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Open the Registry Editor&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;Win + R&lt;/code&gt;, type &amp;quot;regedit,&amp;quot; and press Enter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Navigate to the Following Path&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the path doesn&#39;t exist, you can create it:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE&#92;SOFTWARE&#92;Policies&#92;Google&#92;Chrome&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a New DWORD 32-bit Value&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Right-click in the right pane, select &amp;quot;New&amp;quot; &amp;gt; &amp;quot;DWORD (32-bit) Value.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Name it WebSQLAccess&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the name of the new value as &amp;quot;WebSQLAccess.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Set the Value to 1&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Double-click on &amp;quot;WebSQLAccess,&amp;quot; set the value to 1, and click &amp;quot;OK.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Alternatively, you can run download &lt;a href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/EnableWebSQLAcessChromePolicy.reg&quot;&gt;this file&lt;/a&gt; and run it as administrator to update registry.&lt;/p&gt;
+&lt;h2 id=&quot;enabling-websql-access-on-macos&quot; tabindex=&quot;-1&quot;&gt;Enabling WebSQL Access on macOS &lt;a class=&quot;header-anchor&quot; href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To enable WebSQL access on a Mac, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Run the Following Command in Terminal&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open Terminal and type the following command:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;defaults &lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt; com.google.Chrome WebSQLAccess &lt;span class=&quot;token parameter variable&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Restart Chrome&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Close and reopen Google Chrome to allow the changes to take effect.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;checking-websqlaccess-policy&quot; tabindex=&quot;-1&quot;&gt;Checking WebSQLAccess Policy &lt;a class=&quot;header-anchor&quot; href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To verify that the changes have been successfully applied, you can follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open new tab and type &lt;code&gt;chrome://policy&lt;/code&gt; in Google Chrome.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search for &amp;quot;WebSQLAccess&amp;quot; in the policy list. It should appear with the appropriate settings like below table.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Policy name&lt;/th&gt;
+&lt;th&gt;Policy value&lt;/th&gt;
+&lt;th&gt;Source&lt;/th&gt;
+&lt;th&gt;Applies to&lt;/th&gt;
+&lt;th&gt;Level&lt;/th&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;WebSQLAccess&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;Platform&lt;/td&gt;
+&lt;td&gt;Machine&lt;/td&gt;
+&lt;td&gt;Mandatory&lt;/td&gt;
+&lt;td&gt;OK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If everything is set up correctly, your Chrome browser should now have WebSQL access enabled, allowing you to use the feature as needed.&lt;/p&gt;
+&lt;p&gt;Please note that enabling features through policy changes can have security implications, so use this feature responsibly and consider the potential risks associated with enabling WebSQL access on your browser.&lt;/p&gt;
+&lt;p&gt;Happy browsing!&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>This is my first post.</title>
