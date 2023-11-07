@@ -55,7 +55,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Alternatively, you can run download &lt;a href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/EnableWebSQLAcessChromePolicy.reg&quot;&gt;this file&lt;/a&gt; and run it as administrator to update registry.&lt;/p&gt;
+&lt;p&gt;Alternatively, you can download &lt;a href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/EnableWebSQLAcessChromePolicy.reg&quot;&gt;this file&lt;/a&gt; and run it as administrator to update registry.&lt;/p&gt;
 &lt;h2 id=&quot;enabling-websql-access-on-macos&quot; tabindex=&quot;-1&quot;&gt;Enabling WebSQL Access on macOS &lt;a class=&quot;header-anchor&quot; href=&quot;https://surajjadhav.me/blog/enabling-websql-access-in-chrome-119-and-beyond/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To enable WebSQL access on a Mac, follow these steps:&lt;/p&gt;
 &lt;ol&gt;
